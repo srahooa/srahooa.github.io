@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* h1 {
+  text-align: center;
+}
+
+header {
+  display: block;
+  width: 100%;
+}
+
+#container {
+  width: 100%;
+  background-image: url(../docs/lion.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  font-family: 'Lato', sans-serif;
+  background-color: white;
+  background-size: 100vh;
+}
+
+#container h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 4rem;
+  padding: 100px;
+  color: #740000;
+}
+
+@media screen and (max-width: 420px) {
+  #container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100% vp;
+    padding-bottom: 50px;
+  }
+  #container h1 {
+    padding: 75px 45px;
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 421px) and (max-width: 800px) {
+  #container {
+    background-image: url(../docs/lion.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    width: 100% vp;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 50px;
+  }
+  #container h1 {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 85px 45px;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  #container {
+    background-image: url(../docs/lion.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    height: auto;
+    width: 100% vp;
+    padding-bottom: 60px;
+  }
+  #container h1 {
+    font-size: 6rem;
+    width: 100%;
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=main.css.map */

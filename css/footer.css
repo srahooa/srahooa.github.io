@@ -1,0 +1,109 @@
+#footer {
+  width: 100%;
+  height: 150px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #393b3e;
+  color: whitesmoke;
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+}
+
+#footer .links {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  list-style-type: none;
+  -webkit-transition: ease .25s;
+  transition: ease .25s;
+}
+
+#footer .links #links {
+  display: inline-block;
+  margin: 20px;
+}
+
+#footer .links a {
+  background-color: #393b3e;
+  color: whitesmoke;
+}
+
+#footer .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: #393b3e;
+  color: whitesmoke;
+}
+
+#footer .icons a {
+  background-color: #393b3e;
+  color: whitesmoke;
+}
+
+#footer .icons a:hover {
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+  /* Animation */
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+  background-color: #393b3e;
+  color: whitesmoke;
+}
+
+#footer #copy {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  line-height: 1.8;
+  font-size: 1rem;
+  background-color: #393b3e;
+  color: whitesmoke;
+  color: whitesmoke;
+}
+
+#links:hover {
+  color: whitesmoke;
+  background-color: #740000;
+  text-decoration: underline;
+  border-radius: 20px;
+  padding: 10px;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+@media screen and (max-width: 400px) {
+  .links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+/*# sourceMappingURL=footer.css.map */

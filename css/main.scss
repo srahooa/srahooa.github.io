@@ -1,0 +1,88 @@
+//body and background styling
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    h1 {
+        text-align: center;
+    }
+}
+header {
+    display: block;
+    width: 100%;
+}
+
+//mixins to enable change easier 
+
+@mixin bkgdimage {
+    background-image: url(../docs/lion.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+@mixin headingclr {
+    color: #740000;
+}
+//background image
+#container {
+    width: 100%;
+    @include bkgdimage();
+    font-family: 'Lato', sans-serif;
+    background-color: rgb(255, 255, 255);
+    background-size: 100vh;
+    h1 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 4rem;
+        padding: 100px;
+        @include headingclr();
+    }
+}
+
+//PHONE
+@media screen and (max-width: 420px) {
+    #container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100% vp;
+        padding-bottom: 50px;
+        h1 {
+            padding: 75px 45px;
+            font-size: 3rem;
+        }
+    }
+}
+
+// TABLET
+@media screen and (min-width: 421px) and (max-width: 800px) {
+    #container {
+        @include bkgdimage();
+        width: 100% vp;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 50px;
+        h1 {
+            width: 100%;
+            justify-content: center;
+            padding: 85px 45px;
+        }
+    }
+}
+
+// DESKTOP
+@media screen and (min-width: 801px) {
+    #container {   
+        @include bkgdimage(); 
+        height: auto;
+        width: 100% vp;
+        padding-bottom: 60px;
+    }
+    #container h1 {
+        font-size: 6rem;
+        width: 100%;
+        text-align: center;
+    }
+}

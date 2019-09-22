@@ -1,0 +1,148 @@
+//mixin to make color changes easier
+
+@mixin headingclr {
+    color: #740000;
+}
+@mixin linkcolor {
+    color: whitesmoke;
+    background-color: #740000;
+}
+@mixin transparency {
+    background-color: whitesmoke;
+}
+
+// start of blog page- intro and links to posts
+#blog-info {
+    font-size: 1rem;
+    @include transparency();
+    padding: 10px;
+    margin: 15px;
+    border-radius: 20px;
+    opacity: .7;
+    #link {
+        @include headingclr();
+        font-weight: bold;
+    }
+    //links to posts
+    #internal {
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;  
+    }
+}
+//styling the links
+#internal {
+    @include linkcolor();
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    opacity: .8;
+    font-size: .7rem;
+}
+//blog posts
+.previews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    img {
+        width: 250px;
+        margin: 20px;
+        border-radius: 20px;
+        filter: grayscale(100%);  
+        &:hover {
+            filter: none;
+            transition-duration: 2s;
+        } 
+    } 
+    .date {
+        font-size: .8rem;
+        margin: 0 15px;
+        padding: 10px 0;
+    }  
+    h3 {
+        padding: 10px;
+        border-radius: 20px;
+        opacity: .8;
+        font-family: 'Oswald', sans-serif;;
+        @include headingclr();
+        @include transparency();
+        font-weight: bold;
+    }  
+}
+//creating a white background for better contrast
+#preview {
+    background-color: whitesmoke;
+    padding: 10px 10px 30px 10px;
+    margin: 15px;
+    border-radius: 20px;
+    opacity: .8;
+    font-size: 1.2rem;
+}
+
+// PHONE
+@media screen and (max-width: 420px) {
+    #container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 75px;
+    }
+}
+
+// TABLET
+@media screen and (min-width: 421px) and (max-width: 800px) {
+   #blog-info {
+       font-size: 1.5rem;
+       width: 70%;
+   }
+    p {
+        font-size: 1.4rem;
+    }
+    .previews {
+        width: 80%;
+        padding-bottom: 50px;
+        h3 {
+            font-size: 1.6;
+            font-weight: bold;
+        }
+        .date {
+            font-size: .8rem;
+        }
+        img {
+            width: 400px;
+            justify-content: center;
+        }
+    }
+}
+
+// DESKTOP
+@media screen and (min-width: 801px) {
+    #container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 80px;
+        #blog-info {
+            font-size: 1.5rem;
+            width: 70%;
+        } 
+        p {
+            font-size: 1.4rem;
+        }
+        .previews {
+            width: 80%;
+            padding-bottom: 50px;
+            h3 {
+                font-size: 1.6;
+                font-weight: bold;
+            }
+            .date {
+                font-size: 1rem;
+            }
+            img {
+                width: 400px;
+                justify-content: center;
+            }
+        } 
+    }
+}

@@ -1,0 +1,90 @@
+// landing page styling
+.text { 
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    h3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #2e2e2e;
+    border-radius: 40px;
+    font-size: 1.3rem;   
+    color: white;
+    opacity: .6;  
+    padding: 30px;
+    margin: 0 0 30px 0;      
+    }
+    #list {
+        background-color: #2e2e2e;
+        border-radius: 40px;
+        font-size: 1.3rem;   
+        color: white;
+        opacity: .6; 
+        padding: 30px;
+        li {
+            list-style-type: disc;
+        }
+    }
+}
+
+// PHONE
+@media screen and (max-width: 420px) {
+    #container {
+        width: 100%;
+        // margin-bottom: 50px;
+        justify-content: center;
+    }
+}
+
+// TABLET
+@media screen and (min-width: 421px) and (max-width: 800px) {
+    #container {
+        height: 100%;
+        .text {
+            margin: 100px;
+            h1{
+                font-size: 5rem;
+                padding: 45px;
+                text-align: center;
+            }
+            h3 {
+                font-size: 2.2rem;
+                margin: 50px;
+            }
+            #list {
+                font-size: 2rem;
+                padding: 0 50px; 
+                margin: 50px;
+            }
+        }
+    }
+}
+
+// // DESKTOP
+@media screen and (min-width: 801px) {
+    #container {
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .text {
+        padding: 100px 50px;
+        h1{
+            font-size: 5rem;
+        }
+        h3 {
+            font-size: 2.5rem;
+            margin: 0 0 75px 0;
+            font-weight: lighter;
+        }
+        #list {
+            font-size: 2.2rem;
+            padding: 10px 50px; 
+            font-weight: lighter;
+        }    
+    }
+}

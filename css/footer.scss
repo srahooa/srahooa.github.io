@@ -1,0 +1,76 @@
+// APPLYING STYLING FOR THE FOOTER
+// SHOULD BE RESPONSIVE FOR ALL SCREEN SIZES.
+@mixin bkgrdclr {
+    background-color: #393b3e;
+    color: whitesmoke;
+}
+#footer {
+    width: 100%;
+    height: 150px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+    @include bkgrdclr();
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    .links {
+        grid-row: 1/2;
+        list-style-type: none;
+        transition: ease .25s;
+        #links {
+            display: inline-block;
+            margin: 20px;
+            // color: #b5b5b5;
+        }
+        a {
+            @include bkgrdclr();
+        }
+    }
+     //SOCIAL MEDIA LINKS
+    .icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        justify-content: space-evenly;
+        @include bkgrdclr();
+        a {
+            @include bkgrdclr();
+        &:hover {
+            transition: transform .2s; /* Animation */
+            transform: scale(1.5); 
+            transition-duration: .5s;
+            @include bkgrdclr();
+            }
+        }
+    }
+    
+    //COPYRIGHTS
+    #copy {
+        grid-row: 3/4;
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        line-height: 1.8;
+        font-size: 1rem;
+        @include bkgrdclr();
+        color: whitesmoke;
+    }
+}
+//HOVER AFFECT TO PROVIDE MORE CONTRAST
+#links:hover  {
+    color: whitesmoke;
+    background-color: #740000;
+    text-decoration: underline;
+    border-radius: 20px;
+    padding: 10px;
+    transition-duration: .5s;
+}  
+
+@media screen and (max-width: 400px) {
+    .links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+ 
